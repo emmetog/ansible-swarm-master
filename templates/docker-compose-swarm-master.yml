@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  swarm_master:
+    image: swarm
+    ports:
+      - "4000:4000"
+    restart: always
+    mem_limit: "32M"
+    command: "manage -H :4000 --replication --advertise {{ ansible_default_ipv4["address"] }}:4000 consul://{{ ansible_default_ipv4["address"] }}:8500"

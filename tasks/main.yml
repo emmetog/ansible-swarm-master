@@ -1,0 +1,19 @@
+---
+
+- name: Ensure needed directories exist
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /containers/docker-compose/
+
+- name: Ensure docker-compose for swarm-master is up to date
+  template:
+    src: docker-compose-swarm-master.yml
+    dest: /containers/docker-compose/docker-compose-swarm-master.yml
+
+- name: Run docker-compose pull
+  command: /usr/local/bin/docker-compose -f /containers/docker-compose/docker-compose-swarm-master.yml --project-name swarm-master pull
+
+- name: Run docker-compose up
+  command: /usr/local/bin/docker-compose -f /containers/docker-compose/docker-compose-swarm-master.yml --project-name swarm-master up -d
