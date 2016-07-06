@@ -5,6 +5,9 @@ An Ansible role for provisioning servers with docker swarm masters.
 
 This role ensures that a docker swarm master instance is running on a host.
 
+Usually used with the [emmetog.swarm-agent](https://github.com/emmetog/ansible-swarm-agent) role which installs
+swarm agents on hosts.
+
 Requirements
 ------------
 
