@@ -37,6 +37,17 @@ Then use the role in a playbook as follows:
      - emmetog.swarm-master
 ```
 
+If used with the [emmetog.swarm-agent](https://github.com/emmetog/ansible-swarm-agent) role then you might decide to run both
+in one block like this:
+```yml
+- hosts: swarm_nodes
+  roles:
+     - emmetog.swarm-master
+     - emmetog.swarm-agent
+```
+Note: That will run both a swarm master and a swam agent on each node, which may or may not be what you want to do. Add
+salt to taste.
+
 License
 -------
 
