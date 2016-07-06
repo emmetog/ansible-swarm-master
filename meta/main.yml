@@ -149,11 +149,11 @@ galaxy_info:
   # Below are all categories currently available. Just as with
   # the platforms above, uncomment those that apply to your role.
   #
-    galaxy_tags:
-    - docker
-    - swarm
-    - master
-    - cluster
+  galaxy_tags:
+  - docker
+  - swarm
+  - master
+  - cluster
 dependencies:
   - emmetog.docker-compose
   
