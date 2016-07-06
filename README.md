@@ -1,5 +1,5 @@
-Role Name
-=========
+emmetog.swarm-master
+====================
 
 An Ansible role for provisioning servers with docker swarm masters.
 
