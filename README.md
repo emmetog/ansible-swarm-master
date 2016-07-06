@@ -3,6 +3,8 @@ Role Name
 
 An Ansible role for provisioning servers with docker swarm masters.
 
+This role ensures that a docker swarm master instance is running on a host.
+
 Requirements
 ------------
 
